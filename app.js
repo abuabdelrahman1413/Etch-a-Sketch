@@ -6,7 +6,7 @@ reset.addEventListener("click", (e) => {
   do {
     size = prompt("Enter the size of the grid less than or equal to 100");
     // if user cancels the prompt
-    if (size === null || size === "") {
+    if (size === null || size === "" || size === undefined || size <= 0) {
       size = 16;
       break;
     }
