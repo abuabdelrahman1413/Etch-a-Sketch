@@ -5,6 +5,11 @@ reset.addEventListener("click", (e) => {
   container.innerHTML = "";
   do {
     size = prompt("Enter the size of the grid less than or equal to 100");
+    // if user cancels the prompt
+    if (size === null) {
+      size = 16;
+      break;
+    }
   } while (size > 100);
   makeGrid(size);
 });
