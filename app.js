@@ -9,5 +9,8 @@ for (let i = 0; i < size; i++) {
     const div = document.createElement("div");
     div.classList.add("grid-item");
     divItems.appendChild(div);
+    div.addEventListener("mouseover", (e) => {
+      div.classList.toggle("grid-item-hover");
+    });
   }
 }
