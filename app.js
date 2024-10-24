@@ -15,11 +15,14 @@ reset.addEventListener("click", (e) => {
 });
 
 for (let i = 0; i < size; i++) {
+  const squareSize = 960 / size;
   let divItems = document.createElement("div");
   divItems.classList.add("grid-items");
   container.appendChild(divItems);
   for (let j = 0; j < size; j++) {
     let div = document.createElement("div");
+    div.style.width = `${squareSize}px`;
+    div.style.height = `${squareSize}px`;
     div.classList.add("grid-item");
     divItems.appendChild(div);
     div.addEventListener("mouseover", (e) => {
@@ -33,11 +36,14 @@ for (let i = 0; i < size; i++) {
 
 function makeGrid(size) {
   for (let i = 0; i < size; i++) {
+    const squareSize = 960 / size;
     let divItems = document.createElement("div");
     divItems.classList.add("grid-items");
     container.appendChild(divItems);
     for (let j = 0; j < size; j++) {
       let div = document.createElement("div");
+      div.style.width = `${squareSize}px`;
+      div.style.height = `${squareSize}px`;
       div.classList.add("grid-item");
       divItems.appendChild(div);
       div.addEventListener("mouseover", (e) => {
