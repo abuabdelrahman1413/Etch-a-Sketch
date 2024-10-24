@@ -1,3 +1,13 @@
+
+function randomColor() {
+  let color = [];
+  for (let i = 0; i < 3; i++) {
+    color.push(Math.floor(Math.random() * 256));
+  }
+  return 'rgb(' + color.join(', ') + ')';
+}
+
+
 let container = document.getElementById("container");
 let size = 16;
 const reset = document.getElementById("reset");
@@ -27,7 +37,7 @@ for (let i = 0; i < size; i++) {
     div.style.backgroundColor = `white`
     divItems.appendChild(div);
     div.addEventListener("mouseover", (e) => {
-      div.style.backgroundColor = "black";
+      div.style.backgroundColor = randomColor();
     });
     // div.addEventListener("mouseleave", (e) => {
     //   div.classList.remove("grid-item-hover");
@@ -49,7 +59,7 @@ function makeGrid(size) {
       div.style.backgroundColor = `white`
       divItems.appendChild(div);
       div.addEventListener("mouseover", (e) => {
-        div.style.backgroundColor = "black";
+        div.style.backgroundColor = randomColor();
       });
       // div.addEventListener("mouseleave", (e) => {
       //   div.classList.remove("grid-item-hover");
