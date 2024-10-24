@@ -23,10 +23,11 @@ for (let i = 0; i < size; i++) {
     let div = document.createElement("div");
     div.style.width = `${squareSize}px`;
     div.style.height = `${squareSize}px`;
-    div.classList.add("grid-item");
+    div.style.border = `1px solid grey`;
+    div.style.backgroundColor = `white`
     divItems.appendChild(div);
     div.addEventListener("mouseover", (e) => {
-      div.classList.toggle("grid-item-hover");
+      div.style.backgroundColor = "black";
     });
     // div.addEventListener("mouseleave", (e) => {
     //   div.classList.remove("grid-item-hover");
@@ -44,10 +45,11 @@ function makeGrid(size) {
       let div = document.createElement("div");
       div.style.width = `${squareSize}px`;
       div.style.height = `${squareSize}px`;
-      div.classList.add("grid-item");
+      div.style.border = `1px solid grey`;
+      div.style.backgroundColor = `white`
       divItems.appendChild(div);
       div.addEventListener("mouseover", (e) => {
-        div.classList.toggle("grid-item-hover");
+        div.style.backgroundColor = "black";
       });
       // div.addEventListener("mouseleave", (e) => {
       //   div.classList.remove("grid-item-hover");
